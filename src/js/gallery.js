@@ -13,8 +13,8 @@ window.addEventListener('keydown', onKeydownPrewImg);
 
 const markupString = createMarkup(gallery);
 renderMarkup(markupString, galleryEl);
-const arrOfSrces = gallery.map(e => e.original);
-const arrOfDescr = gallery.map(e => e.description);
+const arrOfSrces = gallery.map(({ original }) => original);
+const arrOfDescr = gallery.map(({ description }) => description);
 
 function createMarkup(arr) {
   return arr
